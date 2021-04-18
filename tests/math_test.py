@@ -3,15 +3,19 @@ import pytest
 #import the math file from the lib directory
 from lib.math import *
 
+@pytest.fixture
+def input():
+    return(12)
+
 #test the sum function
-def test_add():
-    result = addition(2,3)
-    assert result == 5
+def test_add(input):
+    result = addition(input,3)
+    assert result == 15
 
 #test that the result is 'a' to the power of 'b'
-def test_power():
-    result = powerOf(2,3)
-    assert result == 8
+def test_power(input):
+    result = powerOf(input,3)
+    assert result == 1728
 
 #skip the subtraction test
 @pytest.mark.skip()
