@@ -1,8 +1,6 @@
 import pytest
 from lib.greeting import greeting
 
-class TestGreeting:
-    
-    def test_greeting(self):
-        greet = greeting("Charlie")
-        assert greet == "Hello, Charlie."
+def test_greeting():
+    greet = greeting("Charlie")
+    assert greet == "Hello, Charlie."
