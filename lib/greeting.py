@@ -1,3 +1,3 @@
 def greeting(name):
-    print(f'Hello, {name}.')
+    return f'Hello, {name}.'
 greeting('Larry')
